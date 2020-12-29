@@ -1,0 +1,30 @@
+#
+###thymeleaf页面模板配置
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: /
+  aop:
+    auto: true
+    proxy-target-class: true
+  #    static-path-pattern: /static/**
+
+#  resources:
+#    static-locations: classpath:/static/
+#  thymeleaf:
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    cache: false # 开发时关闭缓存,不然没法看到实时页面
+#    mode: LEGACYHTML5
+#    encoding: UTF-8
+#    servlet:
+#      content-type: text/html
+
+  freemarker:
+    suffix: .html
+#    prefix: classpath:/templates/
+#  mvc:
+#    view:
+#      prefix: classpath:/**
+#      suffix: .html

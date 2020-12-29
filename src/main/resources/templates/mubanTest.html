@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html system "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!--<html>-->
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Thymeleaf</title>
+
+  <script src="jquery/template-web.js"></script>
+
+  <script type="text/html" id="resultTemplate">
+    <h1>{{title}}</h1> {{each books as value i}}
+    <div>{{value}}</div>
+    {{/each}}
+  </script>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      //模拟这个data数据是从服务器获取的数据
+      //这个数据中有两个字段：一个是title，一个是books
+      var data = { //data数据
+        title: '四大名著图书信息',
+        books: ['三国演义', '水浒传', '西游记', '红楼梦']
+      };
+
+      //template根据两个参数生成html片段保存在html里面
+      //这里也就是把data数据保存到id为resultTemplate的template模板中去。
+      var html = template("resultTemplate", data); //第一个参数是模板的id，第二个参数是data数据
+      var container = document.querySelector("#container");
+      container.innerHTML = html;
+
+    }
+  </script>
+
+
+
+</head>
+<body>
+
+<div id="container">
+  <h1>标题</h1>
+  <div>书名1</div>
+  <div>书名2</div>
+  <div>书名3</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,5760 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "这是一个利用Swagger写的一个农产品销售平台的API管理工具",
+		"version": "1.0.0",
+		"title": "农产品销售平台",
+		"termsOfService": "http://www.sdgzs.com",
+		"contact": {
+			"name": "郑晖",
+			"url": "http://www.sdgzs.com",
+			"email": "8042965@sdgzs.com"
+		},
+		"license": {
+			"name": "Apache License 2.0"
+		}
+	},
+	"host": "sdgzs.net:8080",
+	"basePath": "/",
+	"tags": [{
+		"name": "product-controller",
+		"description": "Product Controller"
+	}, {
+		"name": "kaptcha-controller",
+		"description": "Kaptcha Controller"
+	}, {
+		"name": "manager-user-controller",
+		"description": "Manager User Controller"
+	}, {
+		"name": "alipay-controller",
+		"description": "Alipay Controller"
+	}, {
+		"name": "shopping-cart-controller",
+		"description": "Shopping Cart Controller"
+	}, {
+		"name": "order-controller",
+		"description": "Order Controller"
+	}, {
+		"name": "test-controller",
+		"description": "Test Controller"
+	}, {
+		"name": "zh-controller",
+		"description": "ZH Controller"
+	}, {
+		"name": "shipping-address-controller",
+		"description": "Shipping Address Controller"
+	}, {
+		"name": "sys-config-controller",
+		"description": "Sys Config Controller"
+	}, {
+		"name": "member-user-controller",
+		"description": "Member User Controller"
+	}],
+	"paths": {
+		"/rest/agriculture/alipayController/alipayNotifyNotice": {
+			"get": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"head": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingHEAD",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"post": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"put": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingPUT",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"options": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingOPTIONS",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayNotifyNotice",
+				"operationId": "alipayNotifyNoticeUsingPATCH",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/alipayController/alipayReturnNotice": {
+			"get": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"head": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingHEAD",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"post": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"put": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingPUT",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"options": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingOPTIONS",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["alipay-controller"],
+				"summary": "alipayReturnNotice",
+				"operationId": "alipayReturnNoticeUsingPATCH",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "charset",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "method",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total_amount",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "auth_app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "version",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "app_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sign_type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "seller_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "timestamp",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/ModelAndView"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/alipayController/parProductById/{userId}/{productIdStr}/{shoppingCartNoStr}": {
+			"get": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"head": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingHEAD",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"post": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"put": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingPUT",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"options": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingOPTIONS",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["alipay-controller"],
+				"summary": "购买物品付款",
+				"operationId": "parProductByIdUsingPATCH",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNoStr",
+					"in": "path",
+					"description": "shoppingCartNoStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/kaptchaController/checkVerify": {
+			"post": {
+				"tags": ["kaptcha-controller"],
+				"summary": "checkVerify",
+				"operationId": "checkVerifyUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "captcha",
+					"in": "query",
+					"description": "captcha",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/kaptchaController/checkcode": {
+			"post": {
+				"tags": ["kaptcha-controller"],
+				"summary": "验证验证码",
+				"operationId": "checkcodeUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["text/html;charset=utf-8"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/kaptchaController/getKaptchaImage": {
+			"get": {
+				"tags": ["kaptcha-controller"],
+				"summary": "获取验证码",
+				"operationId": "getKaptchaImageUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/kaptchaController/getVerify": {
+			"get": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"head": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingHEAD",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"post": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"put": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingPUT",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"options": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingOPTIONS",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["kaptcha-controller"],
+				"summary": "getVerify",
+				"operationId": "getVerifyUsingPATCH",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/addManagerUserInfo": {
+			"post": {
+				"tags": ["manager-user-controller"],
+				"summary": "添加管理员信息",
+				"operationId": "addManagerUserInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/delManagerUserById/{managerIdStr}": {
+			"delete": {
+				"tags": ["manager-user-controller"],
+				"summary": "删除管理员信息",
+				"operationId": "delManagerUserByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerIdStr",
+					"in": "path",
+					"description": "managerIdStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/editManagerUserInfo": {
+			"post": {
+				"tags": ["manager-user-controller"],
+				"summary": "修改管理员用户信息",
+				"operationId": "editManagerUserInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/editOldPassword": {
+			"post": {
+				"tags": ["manager-user-controller"],
+				"summary": "修改管理员密码",
+				"operationId": "editOldPasswordUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/getManagerUserInfo": {
+			"get": {
+				"tags": ["manager-user-controller"],
+				"summary": "获取管理员用户信息",
+				"operationId": "getManagerUserInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/getManagerUserListAll": {
+			"post": {
+				"tags": ["manager-user-controller"],
+				"summary": "获取分页信息",
+				"operationId": "listUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/managerUserController/login": {
+			"get": {
+				"tags": ["manager-user-controller"],
+				"summary": "用户登录接口",
+				"operationId": "loginUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "managerId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "managerName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "start",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "power",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/addMemberUserInfo": {
+			"post": {
+				"tags": ["member-user-controller"],
+				"summary": "添加会员信息",
+				"operationId": "addMemberUserInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/delMemberUserById/{userIdStr}": {
+			"delete": {
+				"tags": ["member-user-controller"],
+				"summary": "删除管理员信息",
+				"operationId": "delMemberUserByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userIdStr",
+					"in": "path",
+					"description": "userIdStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/editMemberUserInfo": {
+			"post": {
+				"tags": ["member-user-controller"],
+				"summary": "修改会员用户信息",
+				"operationId": "editMemberUserInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/editOldPassword": {
+			"post": {
+				"tags": ["member-user-controller"],
+				"summary": "修改会员密码",
+				"operationId": "editOldPasswordUsingPOST_1",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/getMemberUserInfo": {
+			"get": {
+				"tags": ["member-user-controller"],
+				"summary": "获取会员用户信息",
+				"operationId": "getMemberUserInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/getMemberUserListAll": {
+			"post": {
+				"tags": ["member-user-controller"],
+				"summary": "获取会员分页信息",
+				"operationId": "listUsingPOST_1",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/memberUserController/login": {
+			"get": {
+				"tags": ["member-user-controller"],
+				"summary": "用户登录接口",
+				"operationId": "loginUsingGET_1",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "password",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sex",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "age",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "phone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "email",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "violation",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "userIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "captcha",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "oldPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "newPassword",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "provinceStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/orderController/getOrderListAll": {
+			"get": {
+				"tags": ["order-controller"],
+				"summary": "获取订单分页信息",
+				"operationId": "getOrderListAllUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "orderId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "tradeDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "paymentAmount",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "gwcount",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "tradeDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/addProductFixtureNumber": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "商品-购买人数+1，但是如果多线程的情况下可能会出现问题",
+				"operationId": "addProductFixtureNumberUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productId",
+					"in": "query",
+					"description": "productId",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/addProductImage": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "上传商品简介内容中的插入的单张图",
+				"operationId": "addProductImageUsingPOST",
+				"consumes": ["multipart/form-data"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "editormd-image-file",
+					"in": "formData",
+					"description": "editormd-image-file",
+					"required": false,
+					"type": "file"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/addProductInfo": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "商城后端－上传图片－发布商品",
+				"operationId": "addProductInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "fixtureNumber",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "turnover",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "likes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "favnum",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "comments",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "onSale",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "rank",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productType",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "introduce",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "displayDrawings",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "postTime",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productTypeStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "softStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "orderSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "typeSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sqlStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "images[]",
+					"in": "query",
+					"description": "images[]",
+					"required": true,
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"collectionFormat": "multi"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/delProductById/{productIdStr}": {
+			"delete": {
+				"tags": ["product-controller"],
+				"summary": "商城后端－管理员:删除商品信息信息",
+				"operationId": "delProductByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productIdStr",
+					"in": "path",
+					"description": "productIdStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/editProductInfo": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "商城后端－修改商品信息",
+				"operationId": "editProductInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "fixtureNumber",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "turnover",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "likes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "favnum",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "comments",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "onSale",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "rank",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productType",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "introduce",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "displayDrawings",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "postTime",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productTypeStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "softStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "orderSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "typeSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sqlStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductByConditionInfoList": {
+			"get": {
+				"tags": ["product-controller"],
+				"summary": "商城前端－根据条件查询商品数据",
+				"operationId": "getProductByConditionInfoListUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "fixtureNumber",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "turnover",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "likes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "favnum",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "comments",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "onSale",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "rank",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productType",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "introduce",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "displayDrawings",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "postTime",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productTypeStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "softStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "orderSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "typeSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sqlStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductByHotInfo": {
+			"get": {
+				"tags": ["product-controller"],
+				"summary": "商城前端－获取热门商品信息：售出数量前四名",
+				"operationId": "getProductByHotInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductByIdInfo": {
+			"get": {
+				"tags": ["product-controller"],
+				"summary": "商城后端－获取商品信息",
+				"operationId": "getProductByIdInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "fixtureNumber",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "turnover",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "likes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "favnum",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "comments",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "onSale",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "rank",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productType",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "introduce",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "displayDrawings",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "postTime",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productTypeStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "softStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "orderSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "typeSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sqlStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductByNewTimeInfo": {
+			"get": {
+				"tags": ["product-controller"],
+				"summary": "商城前端－获取最新发布的商品信息：前四个",
+				"operationId": "getProductByNewTimeInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductListAll": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "商城后端－管理员:获取商品分页信息",
+				"operationId": "listUsingPOST_2",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "fixtureNumber",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "turnover",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "likes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "favnum",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "comments",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "onSale",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "rank",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productType",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "introduce",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "displayDrawings",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "postTime",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productTypeStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "softStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "orderSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "typeSql",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "sqlStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/productController/getProductRecommendsByUserId": {
+			"post": {
+				"tags": ["product-controller"],
+				"summary": "根据用户id去推荐适合该用户的商品",
+				"operationId": "getProductRecommendsByUserIdUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"description": "userId",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shippingAddressController/addShippingAddress": {
+			"post": {
+				"tags": ["shipping-address-controller"],
+				"summary": "新增收货人地址",
+				"operationId": "addShippingAddressUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "shippingAddressId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "mobilePhone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "defaultAddress",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "address",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shippingAddressController/deleteShippingAddressById/{userId}/{shippingAddressId}": {
+			"delete": {
+				"tags": ["shipping-address-controller"],
+				"summary": "根据地址id删除",
+				"operationId": "deleteShippingAddressByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "shippingAddressId",
+					"in": "path",
+					"description": "shippingAddressId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shippingAddressController/editShippingAddressInfo": {
+			"post": {
+				"tags": ["shipping-address-controller"],
+				"summary": "修改收货地址",
+				"operationId": "editShippingAddressInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "shippingAddressId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "mobilePhone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "defaultAddress",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "address",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shippingAddressController/getShippingAddressInfo": {
+			"get": {
+				"tags": ["shipping-address-controller"],
+				"summary": "获取收货地址",
+				"operationId": "getShippingAddressInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "shippingAddressId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "mobilePhone",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "province",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "area",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "street",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "completeAddress",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "remarks",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "createDate",
+					"in": "query",
+					"required": false,
+					"type": "string",
+					"format": "date-time"
+				}, {
+					"name": "createDateStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "defaultAddress",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "address",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shippingAddressController/getShippingAddressInfoById/{userId}/{shippingAddressId}": {
+			"get": {
+				"tags": ["shipping-address-controller"],
+				"summary": "根据id获取单个地址信息",
+				"operationId": "getShippingAddressInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "shippingAddressId",
+					"in": "path",
+					"description": "shippingAddressId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shoppingCartController/addShopCar": {
+			"post": {
+				"tags": ["shopping-cart-controller"],
+				"summary": "添加购物车",
+				"operationId": "addShopCarUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "shoppingCartId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "userId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "productId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "amount",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "payStatus",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "out_trade_no",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "memberUserName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "productPrice",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "double"
+				}, {
+					"name": "homeDisplayDrawing",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "shoppingCartNo",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shoppingCartController/delShopCar/{userId}/{shoppingCartNoArr}": {
+			"delete": {
+				"tags": ["shopping-cart-controller"],
+				"summary": "移除购物车",
+				"operationId": "delShopCarUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "shoppingCartNoArr",
+					"in": "path",
+					"description": "shoppingCartNoArr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shoppingCartController/getOrderInfoList/{getType}/{userId}": {
+			"get": {
+				"tags": ["shopping-cart-controller"],
+				"summary": "列出用户的订单",
+				"operationId": "getOrderInfoListUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "getType",
+					"in": "path",
+					"description": "getType",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "userId",
+					"in": "path",
+					"description": "userId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/shoppingCartController/getShopCarInfoListAll": {
+			"get": {
+				"tags": ["shopping-cart-controller"],
+				"summary": "列出用户购物车所有内容",
+				"operationId": "redissetUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "userId",
+					"in": "query",
+					"description": "userId",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/addSysConfigInfo": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "新增数据字典",
+				"operationId": "addSysConfigInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/addSysSubConfigInfo": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "新增数据字典子项",
+				"operationId": "addSysSubConfigInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/delSysConfigInfoById/{configIdStr}": {
+			"delete": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据id删除数据字典",
+				"operationId": "delSysConfigInfoByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configIdStr",
+					"in": "path",
+					"description": "configIdStr",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/delSysSubConfigInfoById/{subIdStr}/{configId}": {
+			"delete": {
+				"tags": ["sys-config-controller"],
+				"summary": "删除数据字典子项",
+				"operationId": "delSysSubConfigInfoByIdUsingDELETE",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "subIdStr",
+					"in": "path",
+					"description": "subIdStr",
+					"required": true,
+					"type": "string"
+				}, {
+					"name": "configId",
+					"in": "path",
+					"description": "configId",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/editSysConfigInfoById": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "修改数据字典",
+				"operationId": "editSysConfigInfoByIdUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/editSysSubConfigInfo": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "修改数据字典子项",
+				"operationId": "editSysSubConfigInfoUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getAreaInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据市id获取县/区",
+				"operationId": "getAreaInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "provinceCode",
+					"in": "query",
+					"description": "provinceCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityCode",
+					"in": "query",
+					"description": "cityCode",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getCityInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据省id获取市",
+				"operationId": "getCityInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "provinceCode",
+					"in": "query",
+					"description": "provinceCode",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getProvinceInfoAllList": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "获取省",
+				"operationId": "getProvinceInfoAllListUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getStreetInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据县区id获取乡村镇",
+				"operationId": "getStreetInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "provinceCode",
+					"in": "query",
+					"description": "provinceCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityCode",
+					"in": "query",
+					"description": "cityCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaCode",
+					"in": "query",
+					"description": "areaCode",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getSysConfigInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据id查询单个数据字典:回显数据",
+				"operationId": "getSysConfigInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getSysConfigInfoPageList": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "查询数据字典分页展示",
+				"operationId": "getSysConfigInfoPageListUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getSysSubConfigInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据id查询单个数据字典子项:回显数据",
+				"operationId": "getSysSubConfigInfoUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getSysSubConfigInfoPageList": {
+			"post": {
+				"tags": ["sys-config-controller"],
+				"summary": "查询数据字典子项分页展示",
+				"operationId": "getSysSubConfigInfoPageListUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "page",
+					"in": "query",
+					"description": "page",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"description": "limit",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "configName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "subName",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "configIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "subIdStr",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/rest/agriculture/sysConfigController/getVillageInfoById": {
+			"get": {
+				"tags": ["sys-config-controller"],
+				"summary": "根据乡村id获取村委会",
+				"operationId": "getVillageInfoByIdUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "provinceCode",
+					"in": "query",
+					"description": "provinceCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "cityCode",
+					"in": "query",
+					"description": "cityCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "areaCode",
+					"in": "query",
+					"description": "areaCode",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "streetCode",
+					"in": "query",
+					"description": "streetCode",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/test": {
+			"get": {
+				"tags": ["zh-controller"],
+				"summary": "getData",
+				"operationId": "getDataUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"description": "id",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/zhenghui/login": {
+			"get": {
+				"tags": ["test-controller"],
+				"summary": "post",
+				"operationId": "postUsingGET",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [{
+					"name": "name",
+					"in": "query",
+					"description": "name",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"ModelAndView": {
+			"type": "object",
+			"properties": {
+				"empty": {
+					"type": "boolean"
+				},
+				"model": {
+					"type": "object"
+				},
+				"modelMap": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "object"
+					}
+				},
+				"reference": {
+					"type": "boolean"
+				},
+				"status": {
+					"type": "string",
+					"enum": ["100 CONTINUE", "101 SWITCHING_PROTOCOLS", "102 PROCESSING", "103 CHECKPOINT", "200 OK", "201 CREATED",
+						"202 ACCEPTED", "203 NON_AUTHORITATIVE_INFORMATION", "204 NO_CONTENT", "205 RESET_CONTENT",
+						"206 PARTIAL_CONTENT", "207 MULTI_STATUS", "208 ALREADY_REPORTED", "226 IM_USED", "300 MULTIPLE_CHOICES",
+						"301 MOVED_PERMANENTLY", "302 FOUND", "302 MOVED_TEMPORARILY", "303 SEE_OTHER", "304 NOT_MODIFIED",
+						"305 USE_PROXY", "307 TEMPORARY_REDIRECT", "308 PERMANENT_REDIRECT", "400 BAD_REQUEST", "401 UNAUTHORIZED",
+						"402 PAYMENT_REQUIRED", "403 FORBIDDEN", "404 NOT_FOUND", "405 METHOD_NOT_ALLOWED", "406 NOT_ACCEPTABLE",
+						"407 PROXY_AUTHENTICATION_REQUIRED", "408 REQUEST_TIMEOUT", "409 CONFLICT", "410 GONE", "411 LENGTH_REQUIRED",
+						"412 PRECONDITION_FAILED", "413 PAYLOAD_TOO_LARGE", "413 REQUEST_ENTITY_TOO_LARGE", "414 URI_TOO_LONG",
+						"414 REQUEST_URI_TOO_LONG", "415 UNSUPPORTED_MEDIA_TYPE", "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+						"417 EXPECTATION_FAILED", "418 I_AM_A_TEAPOT", "419 INSUFFICIENT_SPACE_ON_RESOURCE", "420 METHOD_FAILURE",
+						"421 DESTINATION_LOCKED", "422 UNPROCESSABLE_ENTITY", "423 LOCKED", "424 FAILED_DEPENDENCY", "425 TOO_EARLY",
+						"426 UPGRADE_REQUIRED", "428 PRECONDITION_REQUIRED", "429 TOO_MANY_REQUESTS",
+						"431 REQUEST_HEADER_FIELDS_TOO_LARGE", "451 UNAVAILABLE_FOR_LEGAL_REASONS", "500 INTERNAL_SERVER_ERROR",
+						"501 NOT_IMPLEMENTED", "502 BAD_GATEWAY", "503 SERVICE_UNAVAILABLE", "504 GATEWAY_TIMEOUT",
+						"505 HTTP_VERSION_NOT_SUPPORTED", "506 VARIANT_ALSO_NEGOTIATES", "507 INSUFFICIENT_STORAGE", "508 LOOP_DETECTED",
+						"509 BANDWIDTH_LIMIT_EXCEEDED", "510 NOT_EXTENDED", "511 NETWORK_AUTHENTICATION_REQUIRED"
+					]
+				},
+				"view": {
+					"$ref": "#/definitions/View"
+				},
+				"viewName": {
+					"type": "string"
+				}
+			}
+		},
+		"View": {
+			"type": "object",
+			"properties": {
+				"contentType": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

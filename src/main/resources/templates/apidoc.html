@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title id="title">swagger-广联达1</title>
+		<meta name="renderer" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<link rel="icon" href=" webjars/images/favicon.ico"></link>
+		<link rel="stylesheet" href=" webjars/lib/layui-v2.5.5/css/layui.css" media="all"></link>
+		<link rel="stylesheet" href=" webjars/css/layuimini.css?v=2.0.4.2" media="all"></link>
+		<link rel="stylesheet" href=" webjars/css/themes/default.css" media="all"></link>
+		<link rel="stylesheet" href=" webjars/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all"></link>
+		<!--[if lt IE 9]>
+		<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+		<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style id="layuimini-bg-color">
+		</style>
+		
+		<style>
+			.layui-layout-admin .layuimini-logo {
+			  width: 300px;
+			}
+			
+			.layuimini-tool {
+			    left: 300px;
+			}
+			
+			.layui-body {
+			    left: 300px;
+			}
+			
+			.layui-layout-admin .layui-side {
+			    width: 300px;
+			}
+			
+			.layui-nav-tree {
+			    width: 300px;
+			}
+		</style>
+	</head>
+	<body class="layui-layout-body layuimini-all">
+		
+
+		
+		<div class="layui-layout layui-layout-admin">
+
+			<div class="layui-header header">
+				<div class="layui-logo layuimini-logo"></div>
+
+					<div class="layui-logo layuimini-logo">
+						<a href="">
+							<img src="images/logo.png" alt="logo"/>
+							<h1 id="left_title">swagger-广联达</h1>
+						</a>
+					</div>
+					
+				<div class="layuimini-header-content">
+					<a>
+						<div class="layuimini-tool"><i title="展开" class="fa fa-outdent" data-side-fold="1"></i></div>
+					</a>
+
+					<!--电脑端头部菜单-->
+					<ul class="layui-nav layui-layout-left layuimini-header-menu layuimini-menu-header-pc layuimini-pc-show">
+					</ul>
+
+					<ul class="layui-nav layui-layout-right">
+
+						<li class="layui-nav-item" lay-unselect>
+							<a href="javascript:;" data-refresh="刷新"><i class="fa fa-refresh"></i></a>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a href="javascript:;" data-clear="清理" class="layuimini-clear"><i class="fa fa-trash-o"></i></a>
+						</li>
+						<li class="layui-nav-item mobile layui-hide-xs" lay-unselect>
+							<a href="javascript:;" data-check-screen="full"><i class="fa fa-arrows-alt"></i></a>
+						</li>
+						<li class="layui-nav-item layuimini-setting">
+							<a href="javascript:;"><span>设置</span></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;" layuimini-content-href="user-setting.html" data-title="系统设置" data-icon="fa fa-gears">系统设置<span
+										 class="layui-badge-dot"></span></a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item layuimini-select-bgcolor" lay-unselect>
+							<a href="javascript:;" data-bgcolor="配色方案"><i class="fa fa-ellipsis-v"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--无限极左侧菜单-->
+			<div class="layui-side layui-bg-black layuimini-menu-left">
+
+				<ul class="layui-nav layui-nav-tree layui-this" id="multi_module_0">
+					
+					<li class="layui-nav-item menu-li undefined"> 
+						<a layuimini-href="welcome.html" target="_self" href="javascript:;">
+							<i class="fa fa-home"></i> 
+							<span class="layui-left-nav">主页</span>
+						</a> 
+					</li>
+					
+					
+					<li class="layui-nav-item menu-li undefined layui-nav-itemed" id="caidanya"> 
+						<a target="_self" href="javascript:;"> 
+							<i class="fa fa-file-text"></i>
+							<span class="layui-left-nav">用户管理</span>
+							<span class="layui-nav-more"></span>
+						</a>
+					</li> 
+					
+					
+					<span class="layui-nav-bar" style="top: 0px; height: 0px; opacity: 0;"></span>
+				</ul>
+			</div>
+
+			<!--初始化加载层-->
+			<!-- <div class="layuimini-loader">
+				<div class="layuimini-loader-inner"></div>
+			</div> -->
+			
+			<!-- 移动导航 -->
+			<div class="layuimini-site-mobile"><i class="layui-icon"></i></div>
+
+			<div class="layui-body">
+
+				<div class="layuimini-tab layui-tab-rollTool layui-tab" lay-filter="layuiminiTab" lay-allowclose="true">
+					<ul class="layui-tab-title">
+						<li class="layui-this" id="layuiminiHomeTabId" lay-id=""></li>
+					</ul>
+					<div class="layui-tab-control">
+						<li class="layuimini-tab-roll-left layui-icon layui-icon-left"></li>
+						<li class="layuimini-tab-roll-right layui-icon layui-icon-right"></li>
+						<li class="layui-tab-tool layui-icon layui-icon-down">
+							<ul class="layui-nav close-box">
+								<li class="layui-nav-item">
+									<a href="javascript:;"><span class="layui-nav-more"></span></a>
+									<dl class="layui-nav-child">
+										<dd><a href="javascript:;" layuimini-tab-close="current">关 闭 当 前</a></dd>
+										<dd><a href="javascript:;" layuimini-tab-close="other">关 闭 其 他</a></dd>
+										<dd><a href="javascript:;" layuimini-tab-close="all">关 闭 全 部</a></dd>
+									</dl>
+								</li>
+							</ul>
+						</li>
+					</div>
+					<div class="layui-tab-content">
+						<!-- <div id="layuiminiHomeTabIframe" class="layui-tab-item layui-show">
+						</div> -->
+						
+						<div id="homeTabIframe" class="layui-tab-item layui-show">
+							
+						<script id="testabc" type="text/html">
+						   <!-- 基本信息 -->
+						   <div class="layui-fluid" style="display: block;">
+								<div class="layui-row layui-col-space15">
+									<div class="layui-col-md12">
+										<div class="layui-row layui-col-space15">
+											<div class="layui-col-md12">
+												<div class="layui-card">
+												  <div class="layui-card-header" style="text-align: center;"><strong><h1>{{info.title}}</h1></strong></div>
+												  <div class="layui-card-body">
+													<table class="layui-table">
+													  <colgroup>
+														<col width="150">
+														<col>
+													  </colgroup>
+													  <tbody>
+														<tr>
+														  <td>简介</td>
+														  <td>
+															  {{info.description}}
+														</td>
+														</tr>
+														<tr>
+														  <td>作者</td>
+														  <td>{{info.contact.name}}</td> 
+														</tr>
+														<tr>
+														  <td>版本</td>
+														  <td>{{info.version}}</td>
+														</tr>
+														<tr>
+														  <td>host</td>
+														  <td>{{host}}</td>
+														</tr>
+													  <tr>
+														<td>basePath</td>
+														<td>{{basePath}}</td>
+													  </tr>
+													  <tr>
+														<td>服务Url</td>
+														<td>{{info.contact.url}}</td>
+													  </tr>
+													  <tr>
+														<td>分组名称</td>
+														<td>知识库</td>
+													  </tr>
+													  <tr>
+														<td>分组Url</td>
+														<td>/v2/api-docs?group=知识库</td>
+													  </tr>
+													  <tr>
+														<td>分组location</td>
+														<td>/v2/api-docs?group=知识库</td>
+													  </tr>
+													  <tr>
+														<td>接口统计信息</td>
+														<td>共：123</td>
+													  </tr>
+													  
+													  </tbody>
+													</table>
+												  </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							   </div>
+						   
+						   </script>
+						</div>
+						
+						
+						<!-- <div id="homeTabIframe" class="layui-tab-item ">
+							22222
+						</div> -->
+					
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		
+		<!-- layui-nav-item menu-li undefined 
+		 <li class="layui-nav-item menu-li undefined layui-nav-itemed" id="caidanya">
+		 -->
+		<script id="caidan" type="text/html">
+			 {{each tags value index}}
+			 
+				<li class="layui-nav-item menu-li undefined" id="caidanya">
+					<a target="_self" href="javascript:;"> 
+						<i class="fa fa-file-text"></i>
+						<span class="layui-left-nav">{{value.name}}</span>
+						<span class="layui-nav-more"></span>
+					</a>
+					
+					<dl class="layui-nav-child ">
+						 {{each paths path_value path_index}}
+							
+							{{each path_value method_value method_index}}
+								{{if method_value.tags[0] == value.name }}
+									<dd class="menu-dd"> 
+										<a href="javascript:;" 
+											name="a_path" 
+											path="{{path_index}}"
+											method="{{method_index}}"
+											operationId="{{method_value.operationId}}"
+											> 
+											<i class="fa fa-file-text"></i>
+											<span class="layui-left-nav">
+										    [{{method_index}}]
+											{{method_value.summary}}
+											</span>
+										</a> 
+									</dd>
+								 {{/if}}
+							{{/each}}
+							
+						{{/each}}
+					</dl>
+				</li>
+			{{/each}}
+			
+		  </script>
+
+
+		<script id="body_muban" type="text/html">
+			<!-- 头部 -->
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+				
+			 <!-- 选项卡 ：文档 & 调试 -->
+			  <ul class="layui-tab-title">
+			    <li class="layui-this"> 
+					<i class="layui-icon">&#xe60e;</i>
+					<span>文档</span>
+				</li>
+			    <li> 
+					<i class="layui-icon">&#xe64c;</i>
+					<span>调试</span>
+				</li>
+			  </ul>
+			  
+			  <!-- 内容区域 -->
+			  <div class="layui-tab-content" >
+				  
+			   <!-- 文档区域 -->
+			    <div class="layui-tab-item layui-show">
+					
+					<!-- 模板 -->
+					<div class="layui-fluid">
+					  <div class="layui-row">
+					    <div class="layui-col-xs12">
+					      <div class="layui-card">
+					        <div class="layui-card-header">
+								<div style="float: left;">
+									<h2>{{summary}}</h2>
+								</div>
+								<div style="float: right;">
+									<h4 style="margin-left: 50px;"><a >复制接口</a></h4>
+								</div>
+								
+								<div style="float: right;margin-left: 50px;">
+									<h4><a>复制文档</a></h4>
+								</div>
+							</div>
+					        <div class="layui-card-body" style="background: rgba(73,204,144,.1);">
+					          <span style="background-color: #49cc90;margin-right: 50px;">
+								  {{method}}
+							  </span>	 
+							  <span>
+								  {{path}}
+							  </span>
+					        </div>
+					    </div>
+						  
+						  <!-- 接口描述 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">接口描述</div>
+							
+						    <div class="layui-card-body">
+								{{description}}
+						    </div>
+							
+						  </div>
+						  
+						  <!-- 请求示例 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">请求示例</div>
+							
+						    <div class="layui-card-body">
+								<pre class="layui-code">
+									code
+								</pre>
+						    </div>
+							
+						  </div>
+						  
+						  <!-- 请求参数 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">请求参数</div>
+						  		
+						    <div class="layui-card-body">
+								<table class="layui-table" lay-skin="line">
+								  <colgroup>
+								    <col width="20%">
+								    <col width="20%">
+								    <col width="10%">
+								    <col width="10%">
+								    <col width="30%">
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>参数名称</th>
+								      <th>参数说明</th>
+								      <th>请求类型</th>
+								      <th>是否必填</th>
+								      <th>数据类型</th>
+								    </tr> 
+								  </thead>
+								
+								  <tbody>
+									{{each parameters paramer_value paramer_index}}
+									   <tr>
+										   <td>{{paramer_value.name}}</td>
+										   <td>{{paramer_value.description}}</td>
+										   <td>{{paramer_value.in}}</td>
+										   <td>{{paramer_value.required}}</td>
+										   <td>{{paramer_value.type}}</td>
+									   </tr>
+								    {{/each}}
+								  </tbody>
+								</table>   
+								
+						    </div>
+						  		
+						  </div>
+						  
+						  <!-- 响应状态 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">响应状态</div>
+						  		
+						    <div class="layui-card-body">
+								
+								<table class="layui-table" lay-skin="line">
+								  <colgroup>
+								    <col width="150">
+								    <col width="150">
+								    <col width="200">
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>状态码</th>
+								      <th>说明</th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+									{{each responses responses_value responses_index}}
+										<tr>
+										  <td>{{responses_index}}</td>
+										  <td>{{responses_value.description}}</td>
+										</tr>
+									{{/each}}
+								  </tbody>
+								</table>   
+								
+						    </div>
+						  		
+						  </div>	
+						  
+						  <!-- 响应参数 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">响应参数</div>
+						  		
+						    <div class="layui-card-body">
+								
+								<table class="layui-table" lay-skin="line">
+								  <colgroup>
+								    <col width="150">
+								    <col width="150">
+								    <col width="200">
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>参数名称</th>
+								      <th>参数说明</th>
+								      <th>参数类型</th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>200</td>
+								      <td>OK</td>
+								      <td>OK</td>
+								    </tr>
+									  <tr>
+										<td>400</td>
+										<td>页面错误</td>
+										<td>页面错误</td>
+									  </tr>
+								  </tbody>
+								</table>  
+								
+						    </div>
+						  		
+						  </div>	
+								  
+						  <!-- 响应示例 -->
+						  <div class="layui-card">
+						    <div class="layui-card-header layui-elem-quote">响应示例</div>
+						  		
+						    <div class="layui-card-body">
+								<pre class="layui-code">
+										code
+								</pre>
+						    </div>
+						  		
+						  </div>		
+							
+			  
+						</div>
+					  </div>
+					</div>
+					
+				</div>
+				
+				<!-- debugn区域 -->
+			    <div class="layui-tab-item">
+					<div class="layui-card">
+				        <div class="layui-card-body">
+				          <form class="layui-form">
+							  
+				            <div>
+				              <div class="layui-row layui-col-space10">
+								  
+				                <div class="layui-col-sm11">
+									<div class="layui-form-item">
+									    <label class="layui-form-label">
+											<span id="requestType" style="background-color: #49cc90;margin-right: 50px;">
+											  GET
+											</span>	 
+										</label>
+									    <div class="layui-input-block">
+									      <input id="requestUrl" value="/api/getuserinfo" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+									    </div>
+								    </div>
+				                </div>
+								
+				                <div class="layui-col-sm1">
+				                  <a href="javascript:;" class="layui-btn" id="sendRequest">发起请求</a>
+				                </div>
+								
+				              </div>
+				            </div>
+				          </form>
+						  
+				          <div class="layui-card">
+							<div class="layui-tab layui-tab-brief" >
+							  <div class="layui-tab-content" >
+								  
+							  <ul class="layui-tab-title">
+								<li class="layui-this">请求参数</li>
+								<li>请求头部</li>
+							  </ul>
+							   <!-- 请求参数 -->
+								<div class="layui-tab-item layui-show">
+									<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+										
+											<ul class="layui-tab-title">
+												<li class="layui-this">x-www-form-urlencoded</li>
+												<li>form-data</li>
+												<li>Raw</li>
+											</ul>
+										
+											<div class="layui-tab-content" >
+												<div class="layui-tab-item layui-show" id="xiangyingneirong" style="text-align: left;">
+													<div class="layui-card-body">
+														111
+														
+													</div>							
+												</div>
+												<div class="layui-tab-item" id="raw1">内容5</div>
+												<div class="layui-tab-item" id="headers1"> lalala </div> 
+											</div>
+									</div>
+								</div>
+								
+								<!-- 请求头部 -->
+								<div class="layui-tab-item" id="headers">
+									请求头部
+								</div>
+								
+							  </div>
+							</div> 
+				          </div>
+				        </div>
+				      </div>
+					  
+				   
+					  <div class="layui-card">
+						
+						<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+						  <ul class="layui-tab-title">
+							<li class="layui-this">响应内容</li>
+							<li>Raw</li>
+							<li>Headers</li>
+							<li>Curl</li>
+						  </ul>
+						  <div class="layui-tab-content" >
+							<div class="layui-tab-item layui-show" id="xiangyingneirong" style="text-align: left;">内容不一样是要有</div>
+							<div class="layui-tab-item" id="raw">内容5</div>
+							<div class="layui-tab-item" id="headers">
+							<div class="layui-card-body">
+								<table class="layui-table" lay-skin="line">
+								  <colgroup>
+									<col width="150">
+									<col width="150">
+									<col width="200">
+									<col>
+								  </colgroup>
+								  <thead>
+									<tr>
+									  <th>响应头</th>
+									  <th>值</th>
+									</tr> 
+								  </thead>
+								  
+								 
+								  
+								  <tbody>
+									<tr>
+										<td>connection</td>
+										<td>keep-alive</td>
+									</tr>
+									<tr>
+										<td>content-length</td>
+										<td>4</td>
+									</tr>
+			
+									<tr>
+										<td>content-type</td>
+										<td>text/plain;charset=UTF-8</td>
+									</tr>
+									<tr>
+										<td>date</td>
+										<td>Sat, 10 Oct 2020 02:45:47 GMT</td>
+									</tr>
+									<tr>
+										<td>keep-alive</td>
+										<td>timeout=60</td>
+									</tr>
+									<tr>
+										<td>vary</td>
+										<td>Origin, Access-Control-Request-Method, Access-Control-Request-Headers</td>
+									</tr>
+									  	
+									  	
+									  	
+									  	
+								  </tbody>
+								</table>   
+							</div>
+								
+							<div class="layui-tab-item" >
+								<h5 id="curl" >
+									
+								</h5>
+							</div>
+						  </div>
+						</div> 
+					
+				      </div>
+				   
+					</div>
+				
+				
+			  </div>
+			</div> 
+			
+			
+			
+
+			<style>
+			</style>
+		</script>
+
+
+		<script src=" webjars/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+		<script src=" webjars/js/lay-config.js?v=2.0.0" charset="utf-8"></script>
+
+		<script src=" webjars/lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+		<script src=" webjars/js/jquery.cookie.js" charset="utf-8"></script>
+		<script src=" webjars/js/public.js" charset="utf-8"></script>
+		<script src=" webjars/jquery/template-web.js" charset="utf-8"></script>
+
+
+		<script>
+			$(function() {
+
+				$.ajax({
+					// url: "/v2/api-docs?group=%E7%9F%A5%E8%AF%86%E5%BA%93",
+					url: "/v2/api-docs?group=知识库",
+					// url: " js/data.json",
+					dataType: "json",
+					type: "get",
+					async: false,
+					success: function(data) {
+						var template_layui_footer = {
+							footer: "2020 © 广联达.数据智能部.知识智能部.智能问答部"
+						}
+						var jsonData = eval(data);
+						var res = template("testabc", data);
+
+						console.log(res)
+						// 将模板放入页面中
+						$("#homeTabIframe").html(res);
+						
+						//填充网页标题
+						$("#title").html(jsonData.info.title);
+						// $("#left_title").html(jsonData.info.title);
+						
+						
+						// var html = '<a href="' + jsonData.info.title + '"><img src="' + jsonData.info.title + '" alt="logo"><h1>' + jsonData.info.title + '</h1></a>';
+						var html = '<a href="' + "#" + '"><h1>' + jsonData.info.title + '</h1></a>';
+						$('.layuimini-logo').html(html);
+						
+						
+						var caidan = template("caidan", data);
+						$("#caidanya").html(caidan)
+						
+						console.log("数据请求成功了：")
+						console.log(data)
+						
+						
+						//监听a标签
+						 $("[name='a_path']").click(function () {
+							
+							var path = $(this).attr("path"); //拿到请求的路径
+							var method = $(this).attr("method"); //拿到请求的类型 post get put delete ...
+							var operationId = $(this).attr("operationId"); //拿到operationid
+											
+							
+							 //遍历后台返回的接口的 paths
+							$.each(jsonData.paths[path], function (i, d) {
+			
+								//如果是刚才点击的，就填充该请求的内容
+								if (d.operationId == operationId) {
+									d.path = path;
+									d.method = method;
+								
+									console.log("点开的数据：")
+									console.log(d)
+									//向身体部分填充内容
+									$("#homeTabIframe").html(template("body_muban", d));
+									
+									
+									
+			// 						//如果没有返回值，直接跳过
+			// 						if(!d.responses["200"].hasOwnProperty("schema")){
+			// 							// continue
+			// 							return true;
+			// 						}
+			
+			// 						//基本类型
+			// 						if(d.responses["200"]["schema"].hasOwnProperty("type")){
+			// 							var model = {"type":d.responses["200"]["schema"]["type"]};
+			// 							$("#path-body-response-model").append(tempBodyType.render(model));
+			// 							// continue
+			// 							return true;
+			// 						}
+			
+			// 						//引用类型
+			// 						var modelName = getRefName(d.responses["200"]["schema"]["$ref"]);
+			// 						if(d.parameters){
+			// 							$.each(d.parameters, function (i, p) {
+			// 								if (p["schema"]) {
+			// 									var parameterModelName = getRefName(p["schema"]["$ref"]);
+			// 									renderRefModel("path-body-request-model", jsonData, parameterModelName);
+			// 								}
+			// 							});
+			// 						}
+			// 						renderRefModel("path-body-response-model", jsonData, modelName);
+								}
+							});
+							
+							
+							 
+						 })
+						
+
+					}
+				});
+
+
+			})
+
+
+
+			layui.use(['jquery', 'layer', 'miniAdmin', 'miniTongji'], function() {
+
+
+
+				var $ = layui.jquery,
+					layer = layui.layer,
+					miniAdmin = layui.miniAdmin,
+					miniTongji = layui.miniTongji;
+
+				var data = {
+					"homeInfo": {
+						"title": "首页",
+						"href": "welcome.html?t=1"
+					},
+					"logoInfo": {
+						"title": "农乐城",
+						"image": "images/logo.png",
+						"href": ""
+					},
+					"menuInfo": [{
+						"title": "农乐城",
+						"icon": "fa fa-address-book",
+						"href": "",
+						"target": "_self",
+						"child": [{
+								"title": "主页",
+								"href": "welcome.html",
+								"icon": "fa fa-home",
+								"target": "_self"
+							},
+							{
+								"title": "用户管理",
+								"href": "",
+								"icon": "fa fa-file-text",
+								"target": "_self",
+								"child": [{
+									"title": "会员用户管理",
+									"href": "managerVIP.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用户管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用户管1理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用户2管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用3户管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用4户管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用户5管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员用6户管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}, {
+									"title": "管理员7用户管理aa",
+									"href": "managerVIP1.html",
+									"icon": "fa fa-file-text",
+									"target": "_self"
+								}]
+							}
+						]
+					}]
+				};
+
+				console.log(data)
+
+				var options = {
+					data: data, // 菜单数据
+					clearUrl: "api/clear.json", // 缓存清理接口
+					urlHashLocation: true, // 是否打开hash定位
+					bgColorDefault: true, // 主题默认配置
+					multiModule: false, // 是否开启多模块
+					menuChildOpen: false, // 是否默认展开菜单
+					loadingTime: 0, // 初始化加载时间
+					pageAnim: true, // iframe窗口动画
+					maxTabNum: 20, // 最大的tab打开数量
+				};
+
+				//加载
+				miniAdmin.render_zh(options);
+
+
+			});
+		</script>
+		
+		<script>
+		//   layui.config({
+		//     base: '/src/js/'
+		//   }).use(['layer',  'form','utils', 'component','element'], function () {
+		//     var $ = layui.jquery,
+		//       layer = layui.layer,
+		//       form = layui.form,
+		//       utils = layui.utils;
+		// 	  // ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+		    
+		// 	form.render();
+			
+			
+		// 	form.on('radio(test)', function (data) {
+		// 		alert(data.elem);
+		// 		//console.log(data.elem);
+		// 		alert(data.value);//判断单选框的选中值
+		// 		//console.log(data.value);
+		// 		//alert(data.othis);
+		// 		//layer.tips('开关checked：' + (this.checked ? 'true' : 'false'), data.othis);
+		// 		//layer.alert('响应点击事件');
+		// 	});
+			
+		// 	// //Hash地址的定位
+		// 	// var layid = location.hash.replace(/^#test=/, '');
+		// 	// element.tabChange('test', layid);
+			
+		// 	// element.on('tab(test)', function(elem){
+		// 	//   location.hash = 'test='+ $(this).attr('lay-id');
+		// 	// });
+			
+			
+			
+		//     component = layui.component.init();
+		//     component.on('nav(ccc)', function(cc) {
+		//       console.log(cc.elem);
+		//     });
+			
+		//     var APIConfigs = {
+		//       'GET /api/getuserinfo': {
+		//         id: 1,
+		//         name: '@name',
+		//         email: '@email',
+		//         address: '@region',
+		//         datetime: '@datetime'
+		//       },
+		//       'POST /api/getlist': {
+		//         'list|10': [{
+		//           'id|+1': 1,
+		//           name: '@name',
+		//           email: '@email',
+		//           datetime: '@datetime',
+		//           address: '@region',
+		//         }]
+		//       },
+		//     };
+		//     // 注入mock
+		//     layui.mockjs.inject(APIConfigs);
+			
+			
+		
+		//     $('#sendRequest').on('click', function () {
+		//       // var apiValue = $('select[name=apis]').val();
+		// 	  var requestUrl = $("#requestUrl").val();
+		// 	  var requestType = $("#requestType").text().replace(/\s+/g,"");
+		// 	  console.log(requestUrl)
+		// 	  console.log(requestType)
+			  
+			  
+		// 	  if (requestUrl === '') {
+		// 	    layer.msg('请填写一个API');
+		// 	  } else {
+				
+		// 		var geturl;
+		// 	    geturl = $.ajax({
+		// 	      // url: requestUrl,
+		// 	      url: 'http://127.0.0.1:8080/getStudentById?id=2',
+		// 	      type: requestType,
+		// 	      success: function (res,status, xhr) {
+		// 			$('#xiangyingneirong').html('<pre class="layui-code">' + res + '</pre>');
+		// 			$('#raw').html('<pre class="layui-code">' + res.replace(/\s+/g,"") + '</pre>');
+					
+		// 			console.log(xhr.getAllResponseHeaders())
+		// 			console.log(xhr)
+					
+		// 			var curlData='curl -X GET -H  "Accept:*/*" -H  "Request-Origion:Knife4j" -H  "Content-Type:application/x-www-form-urlencoded" "http://127.0.0.1:8080/getStudentById?id=2';
+					
+		// 			$('#curl').html(curlData);
+					
+		// 			// <div class="layui-tab-item layui-show" id="xiangyingneirong">内容不一样是要有</div>
+		// 			// <div class="layui-tab-item" id="raw">内容5</div>
+		// 			// <div class="layui-tab-item" id="headers">内容5</div>
+		// 			// <div class="layui-tab-item" id="curl">内容5</div>
+					
+		// 	      }
+		// 	    });
+			
+				
+		// 	  }
+		
+		//     });
+		//   });
+		</script>
+		
+	</body>
+</html>
