@@ -8,6 +8,8 @@ import com.truedei.swagger.plugin.util.MdToHtml;
 import com.truedei.swagger.plugin.io.ResolverUtil;
 import com.google.common.base.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import springfox.documentation.builders.ResponseMessageBuilder;
@@ -27,25 +29,21 @@ import java.util.*;
  * OperationBuilderPlugin：对方法起作用
  */
 @Component
-@Order(1)
+@Order(Ordered.LOWEST_PRECEDENCE)
+//@PropertySource("classpath:application.yml")//读取application.yml文件
+//@ConfigurationProperties(prefix="swagger-plugin")
 public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
     @Autowired
     private TypeResolver typeResolver;
 
     static Map<String, Map<String, Object>>  apiFileInfoMaps = null;
 
-
-    //默认路径
-    public static String swaggerMdPaths_default  = "/src/main/resources/md";
+    @Value("${swagger-plugin.scanpath}")
+    private String swaggerPath;
 
     public static List<String> swaggerMdPaths  = new ArrayList<>();
 
     private static boolean flag = false;
-
-//    @Value("${swagger.md.paths}")
-//    private void setSwaggerMdPaths(String swaggerMdPaths){
-//        swaggerMdPaths = swaggerMdPaths;
-//    }
 
     @Override
     public void apply(OperationContext context) {
@@ -54,11 +52,16 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
 
             String packageName = "com.glodon";
 
+            System.out.println("读取到的配置路径："+swaggerPath);
+            if(swaggerPath != null){
+                packageName = swaggerPath;
+            }
+
             //扫描项目中的md文档
             findMdDirectory(packageName);
             config(context);
 
-        //内容已存在就直接加载
+            //内容已存在就直接加载
         }else{
             if(flag){
                 config(context);
@@ -179,7 +182,5 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
     public boolean supports(DocumentationType delimiter) {
         return true;
     }
-
-
 
 }
