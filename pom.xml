@@ -12,12 +12,15 @@
     <groupId>com.truedei.swagger.plugin</groupId>
     <artifactId>truedei-swagger-plugin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+<!--    <version>0.0.1</version>-->
     <name>truedei-swagger-plugin</name>
     <description>truedei-swagger-plugin project</description>
 
-
     <properties>
         <java.version>1.8</java.version>
+<!--        <gpg.homedir>${user.home}/.gnupg</gpg.homedir>-->
+<!--        <gpg.keyname>truedei</gpg.keyname>-->
+<!--        <gpg.passphrase>zH#xY123456</gpg.passphrase>-->
     </properties>
 
     <dependencies>
@@ -126,10 +129,207 @@
             <version>2.13.3</version>
         </dependency>
 
-
-
-
     </dependencies>
+
+
+    <!--maven上传中心服务器配置-->
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+
+    <!--<scm>
+        <connection>scm:https://github.com/truedei/truedei-swagger-plugin.git</connection>
+        <developerConnection>scm:https://github.com/truedei/truedei-swagger-plugin.git</developerConnection>
+        <url>https://github.com/truedei/truedei-swagger-plugin.git</url>
+    </scm>-->
+    <scm>
+        <connection>scm:https://github.com/truedei/truedei-swagger-plugin.git</connection>
+        <developerConnection>scm:https://github.com/truedei/truedei-swagger-plugin.git</developerConnection>
+        <url>https://github.com/truedei/truedei-swagger-plugin.git</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>imcoder</name>
+            <id>imcoder</id>
+            <email>1187931389@qq.com</email>
+            <roles>
+                <role>Java development</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>release</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+
+
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    &lt;!&ndash; Source &ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-source-plugin</artifactId>-->
+<!--                        <version>2.2.1</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>jar-no-fork</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                  &lt;!&ndash;  <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                        <version>2.9.1</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>jar</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>&ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                        <version>1.6</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <phase>verify</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>sign</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                        <version>3.7.0</version>-->
+<!--                        <configuration>-->
+<!--                            <source>1.8</source>-->
+<!--                            <target>1.8</target>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
+<!--                    &lt;!&ndash;Release &ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-release-plugin</artifactId>-->
+<!--                        <version>2.5.1</version>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <artifactId>maven-deploy-plugin</artifactId>-->
+<!--                        <version>2.8.2</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>default-deploy</id>-->
+<!--                                <phase>deploy</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>deploy</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.sonatype.plugins</groupId>-->
+<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--                        <version>1.6.7</version>-->
+<!--                        <extensions>true</extensions>-->
+<!--                        <configuration>-->
+<!--                            <serverId>ossrh</serverId>-->
+<!--                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
+<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-scm-plugin</artifactId>-->
+<!--                        <version>1.8.1</version>-->
+<!--                    </plugin>-->
+
+
+<!--                </plugins>-->
+<!--            </build>-->
+
+<!--            <distributionManagement>-->
+<!--                &lt;!&ndash; 初步审核通过后，会给你这个内容，在上面已经给出 &ndash;&gt;-->
+<!--                <snapshotRepository>-->
+<!--                    <id>sonatype-nexus-snapshots</id>-->
+<!--                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+<!--                </snapshotRepository>-->
+<!--                &lt;!&ndash; 初步审核通过后，会给你这个内容，在上面已经给出 &ndash;&gt;-->
+<!--                <repository>-->
+<!--                    <id>sonatype-nexus-staging</id>-->
+<!--                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--                </repository>-->
+<!--            </distributionManagement>-->
+
+<!--        </profile>-->
+<!--    </profiles>-->
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.7</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>sonatype-nexus-staging</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <distributionManagement>
+                <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
+                <snapshotRepository>
+                    <id>sonatype-nexus-snapshots</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
+                <repository>
+                    <id>sonatype-nexus-staging</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+
+        </profile>
+    </profiles>
+
 
     <build>
         <!-- 配置将哪些资源文件(静态文件/模板文件/mapper文件)加载到tomcat输出目录里 -->
@@ -169,7 +369,77 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+
+            <!--打包源代码-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--生成javadoc-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-javadocs</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+            <!--获取本地私钥签名-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- sonatype提供了自动release的插件，这意味着运行mvn clean deploy后不用手动去close-> release了，此插件会自动release我们的项目到Maven中央仓库。 -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-snapshots</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+
+
         </plugins>
+
     </build>
 
+    <distributionManagement>
+        <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
