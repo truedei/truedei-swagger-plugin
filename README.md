@@ -1,5 +1,11 @@
 # 说明文档
 
+可以访问：
+https://truedei.github.io/#/zh-cn/truedei-swagger-plugin/
+
+查看更详细的说明。
+
+
 
 可以通过下面这个依赖引入，使用：
 
@@ -138,52 +144,6 @@ https://blog.csdn.net/boyin333/article/details/87980108
 - [ ] 2、接口在线测试模块；（团队成员正在同步开发，待公布）
 
 
-
-# 使用说明
-## 1、 支持使用注解动态生成实体类（@Apicp & @ApiIgp）；
-
-已开发完毕待补充
-
-## 2、 支持从文件中读取一些接口描述信息（@APiFileInfo）；
-
-已开发完毕待补充
-
-## 3、 支持api分组（@ApiVersion）；
-
-已开发完毕待补充
-
-## 4、 支持开启此扩展项目的开关的功能（@EnableSwaggerPlugin）；
-
-已开发完毕待补充
-
-## 5、 @Apicp和ApiIgp支持参数示例;
-
-已开发完毕待补充
-
-## 6、 @Apicp和ApiIgp支持参数是否必填选项;
-
-已开发完毕待补充
-
-## 7、 支持配置从配置好的任意package路径读取md文件; 
-
-
-只需要在application.yml中配置上：
-
-例子：
-> 其中com.springbootswagger1.controller为你项目的controller路径
-```xml
-swagger-plugin:
-    scanpath: com.springbootswagger1.controller
-```
-
-
-## 9、 配置相应的log日志输出功能;
-
-未开发
-
-## 10、 支持参数排序;
-
-未开发
 
 # 更新日志记录
 ## 1、2021年1月15日更新记录
