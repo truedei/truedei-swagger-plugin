@@ -13,7 +13,7 @@ https://truedei.github.io/#/zh-cn/truedei-swagger-plugin/
 <dependency>
   <groupId>com.truedei.swagger.plugin</groupId>
   <artifactId>truedei-swagger-plugin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
 </dependency>
 ```
 

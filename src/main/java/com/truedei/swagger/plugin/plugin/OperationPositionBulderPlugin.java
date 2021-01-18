@@ -4,11 +4,15 @@ package com.truedei.swagger.plugin.plugin;
 import com.fasterxml.classmate.TypeResolver;
 import com.truedei.swagger.plugin.annotation.APiFileInfo;
 import com.truedei.swagger.plugin.bean.APiFileInfoBean;
+import com.truedei.swagger.plugin.bean.SwaggerPluginConfigBean;
 import com.truedei.swagger.plugin.util.MdToHtml;
 import com.truedei.swagger.plugin.io.ResolverUtil;
 import com.google.common.base.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -29,21 +33,19 @@ import java.util.*;
  * OperationBuilderPlugin：对方法起作用
  */
 @Component
-@Order(Ordered.LOWEST_PRECEDENCE)
-//@PropertySource("classpath:application.yml")//读取application.yml文件
-//@ConfigurationProperties(prefix="swagger-plugin")
+@Order(1)
 public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
-    @Autowired
-    private TypeResolver typeResolver;
 
-    static Map<String, Map<String, Object>>  apiFileInfoMaps = null;
+    private static final Logger logger = LoggerFactory.getLogger(OperationPositionBulderPlugin.class);
 
-    @Value("${swagger-plugin.scanpath}")
-    private String swaggerPath;
+    private static Map<String, Map<String, Object>>  apiFileInfoMaps = null;
 
-    public static List<String> swaggerMdPaths  = new ArrayList<>();
+    private static List<String> swaggerMdPaths  = new ArrayList<>();
 
     private static boolean flag = false;
+
+    @Autowired
+    private SwaggerPluginConfigBean swaggerPluginConfigBean;
 
     @Override
     public void apply(OperationContext context) {
@@ -52,9 +54,9 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
 
             String packageName = "com.glodon";
 
-            System.out.println("读取到的配置路径："+swaggerPath);
-            if(swaggerPath != null){
-                packageName = swaggerPath;
+            if(swaggerPluginConfigBean != null && swaggerPluginConfigBean.getScan() != null
+                    && swaggerPluginConfigBean.getScan().getPath() != null){
+                packageName = swaggerPluginConfigBean.getScan().getPath();
             }
 
             //扫描项目中的md文档
@@ -70,13 +72,16 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
 
     }
 
-    public void findMdDirectory(String packageName) {
+    private void findMdDirectory(String packageName) {
         if(apiFileInfoMaps == null || apiFileInfoMaps.size()==0) {
 
             ResolverUtil resolverUtil = new ResolverUtil();
             resolverUtil.find(packageName);
 
-//            System.out.println("开始解析文件了------------>>>>");
+            if(swaggerPluginConfigBean.isDebug()){
+                logger.info("开始解析文件了----->"+packageName);
+            }
+
             //读取并文件内容
             apiFileInfoMaps = resolverUtil.getFileContentMap();
 
@@ -86,7 +91,7 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
 
     }
 
-    public void config(OperationContext context){
+    private void config(OperationContext context){
 
         if(flag){
 
@@ -97,7 +102,10 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
                 String flag = null;//获取URL（URL作用是定位到）
 
                 flag = apiFileInfoOptional.get().value();//获取标志，标志：在文件中所在的位置
-//                System.out.println("正在构建：--->"+flag);
+
+                if(swaggerPluginConfigBean.isDebug()){
+                    logger.info("正在构建：--->【"+flag+"】接口");
+                }
 
                 String notes = buildNotes(flag, apiFileInfoMaps);
 
@@ -111,15 +119,17 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
                     context.operationBuilder()
                             .responseMessages(buildResponseMessage(flag, apiFileInfoMaps)); //重构responseMessage响应消息
                 }
-//                else{
-//                    System.out.println(flag+"--->在文件中不存在");
-//                }
+                else{
+                    if(swaggerPluginConfigBean.isDebug()){
+                        logger.warn("在文件中不存在：--->"+flag);
+                    }
+                }
 
             }
-
-//        }
         }else {
-//            System.out.println("没有文件，不加载");
+            if(swaggerPluginConfigBean.isDebug()){
+                logger.warn("没有文件，不加载：--->"+flag);
+            }
         }
     }
 
@@ -182,5 +192,7 @@ public class OperationPositionBulderPlugin implements OperationBuilderPlugin {
     public boolean supports(DocumentationType delimiter) {
         return true;
     }
+
+
 
 }

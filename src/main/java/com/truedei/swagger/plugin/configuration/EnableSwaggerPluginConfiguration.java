@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(
-        basePackages = {"com.glodon.swagger.*"}
+        basePackages = {"com.truedei.swagger.plugin.*"}
 )
 public class EnableSwaggerPluginConfiguration {
 

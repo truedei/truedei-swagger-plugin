@@ -11,7 +11,6 @@ import javassist.bytecode.ConstPool;
 import javassist.bytecode.annotation.Annotation;
 import javassist.bytecode.annotation.BooleanMemberValue;
 import javassist.bytecode.annotation.StringMemberValue;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -371,7 +370,6 @@ public class SwaggerModelReader implements ParameterBuilderPlugin {
 
                     //创建一个ApiModelProperty注解
                     Annotation ann = new Annotation(ApiModelProperty.class.getName(), constPool);
-
 
                     // 向@ApiModelProperty中添加数据  //
                     //1、参数说明 str
